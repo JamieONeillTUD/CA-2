@@ -1,0 +1,225 @@
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #e8f1ff, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header and footer styling */
+header, footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #1e3a8a; /* Royal blue */
+    color: white;
+    font-size: 1.4em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+footer {
+    margin-top: auto;
+}
+
+#subTitlePill {
+    background-color: white;
+    color: #1e3a8a; /* royal blue text */
+    padding: 10px 28px;
+    border-radius: 20px;
+    font-size: 1.25em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    font-weight: bold;
+}
+
+/* Main two column layout (left instructions, right game) */
+#mainLayout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; 
+    margin-top: 20px;
+}
+
+/* Instructions box on left side */
+#instructionsBox {
+    background-color: white;
+    padding: 20px 25px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 1em;
+    margin-top: 20px; 
+}
+
+#instructionsBox h2 {
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: center;
+    color: #1e3a8a;
+}
+
+#instructionsBox ul {
+    padding-left: 20px;
+}
+
+#instructionsBox li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Game box on the right side */
+#gameWrapper {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    transition: transform 0.2s ease;
+}
+
+/* slight hover scale for game wrapper */
+#gameWrapper:hover {
+    transform: scale(1.01);
+}
+
+/* Click counter  */
+#clickCounterBox {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: transform 0.15s ease;
+}
+
+/* small hover pulse effect */
+#clickCounterBox:hover {
+    transform: scale(1.03);
+}
+
+/* Buttons styling */
+button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1e3a8a;
+}
+
+/* clear focus style for keyboard users */
+button:focus-visible {
+    outline: 3px solid #facc15; /* yellow focus ring */
+    outline-offset: 2px;
+}
+
+/* Average score display popup */
+#avgScoreBox {
+    background-color: #1e3a8a; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: transform 0.15s ease;
+}
+
+#avgScoreBox:hover {
+    transform: scale(1.03);
+}
+
+#avgResult {
+    font-size: 1.2em;
+}
+
+/* make shape cards show pointer cursor */
+shape-card {
+    cursor: pointer;
+}
+
+/* Full-screen dark overlay */
+#winPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup container */
+#winPopupBox {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    animation: popupFade 0.25s ease-out;
+}
+
+/* Title */
+#winPopupBox h2 {
+    color: #1e3a8a;
+    margin-top: 0;
+}
+
+/* Popup buttons */
+#winPopupOkBtn, #winPopupPlayAgainBtn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+#winPopupOkBtn:hover,
+#winPopupPlayAgainBtn:hover {
+    background: #1e3a8a;
+}
+
+/* popup animation */
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
