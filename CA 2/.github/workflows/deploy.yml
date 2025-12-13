@@ -30,7 +30,7 @@ jobs:
       - name: Build to Repository B 
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ .JEST_GA_TOKEN }}
+          personal_token: ${{ secret.JEST_GA_TOKEN }}
           external_repository: JamieONeillTUD/CA-2
           publish_branch: main
           publish_dir: ./dist
